@@ -1,49 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Quiz System</title>
+    <title>Programming Quiz Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>Online Quiz System</h1>
-    <p class="subtitle">Test your knowledge and learn something new!</p>
+<header>
+    <h1>Programming Quiz Hub</h1>
+    <p>Learn, Practice and Test Your Coding Knowledge</p>
+</header>
 
-    <div id="home-screen">
-        <h2>Welcome to the Quiz</h2>
-        <p>Answer the questions before the timer ends.</p>
-        <button id="start-btn">Start Quiz</button>
-    </div>
+<main class="container">
 
-    <div id="quiz-screen" class="hidden">
+    <section id="language-screen">
+        <h2>Choose Your Programming Language</h2>
+        <p>Select a language to explore its quiz sets.</p>
+
+        <div id="language-list" class="grid">
+            <button class="language-card" data-language="Python">🐍 Python</button>
+            <button class="language-card" data-language="Java">☕ Java</button>
+            <button class="language-card" data-language="C">💻 C</button>
+            <button class="language-card" data-language="C++">⚙️ C++</button>
+            <button class="language-card" data-language="HTML">🌐 HTML</button>
+            <button class="language-card" data-language="JavaScript">🟨 JavaScript</button>
+        </div>
+    </section>
+
+    <section id="sets-screen" class="hidden">
+        <button id="back-languages" class="secondary">← Back to Languages</button>
+        <h2 id="selected-language"></h2>
+        <p>Choose a quiz set. Each set contains 10 questions.</p>
+        <div id="set-list" class="grid"></div>
+    </section>
+
+    <section id="quiz-screen" class="hidden">
         <div class="quiz-info">
             <span id="question-number"></span>
-            <span id="timer">Time: 60 seconds</span>
+            <span id="timer">Time: 120 seconds</span>
         </div>
 
-        <div class="progress-container">
+        <div class="progress-track">
             <div id="progress-bar"></div>
         </div>
 
         <h2 id="question"></h2>
         <div id="options"></div>
         <p id="feedback"></p>
-        <button id="next-btn" class="hidden">Next Question</button>
-    </div>
 
-    <div id="result-screen" class="hidden">
+        <button id="next-btn" class="hidden">Next Question</button>
+    </section>
+
+    <section id="result-screen" class="hidden">
         <h2>Quiz Completed!</h2>
-        <p id="score"></p>
+        <h3 id="score"></h3>
         <p id="result-message"></p>
-        <button id="restart-btn">Try Again</button>
-    </div>
-</div>
+        <button id="retry-btn">Retry This Set</button>
+        <button id="choose-set-btn" class="secondary">Choose Another Set</button>
+        <button id="choose-language-btn" class="secondary">Choose Another Language</button>
+    </section>
+
+</main>
+
+<footer>
+    <p>Programming Quiz Hub | Practice Every Day</p>
+</footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
