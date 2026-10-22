@@ -69,7 +69,6 @@ currentQuestion = 0;
 score = 0;
 timeLeft = 60;
 
-```
 homeScreen.classList.add("hidden");
 resultScreen.classList.add("hidden");
 quizScreen.classList.remove("hidden");
@@ -86,14 +85,12 @@ timerInterval = setInterval(() => {
         finishQuiz();
     }
 }, 1000);
-```
 
 }
 
 function showQuestion() {
 answered = false;
 
-```
 const item = questions[currentQuestion];
 
 questionNumber.textContent =
@@ -115,14 +112,12 @@ item.options.forEach((option, index) => {
 
     optionsElement.appendChild(button);
 });
-```
 
 }
 
 function selectAnswer(selectedIndex, selectedButton) {
 if (answered) return;
 
-```
 answered = true;
 
 const correctIndex = questions[currentQuestion].answer;
@@ -153,7 +148,6 @@ nextButton.textContent =
         : "Next Question";
 
 nextButton.classList.remove("hidden");
-```
 
 }
 
@@ -173,7 +167,6 @@ timerElement.textContent = `Time: ${timeLeft} seconds`;
 function finishQuiz() {
 clearInterval(timerInterval);
 
-```
 quizScreen.classList.add("hidden");
 resultScreen.classList.remove("hidden");
 
@@ -184,6 +177,5 @@ document.getElementById("result-message").textContent =
     score === questions.length
         ? "Excellent! You answered every question correctly!"
         : "Good effort! Keep practising to improve your score.";
-```
 
 }
