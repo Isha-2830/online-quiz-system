@@ -1,9 +1,6 @@
 ## Project Screenshots
 
-### 1. Home Page
-![Home Page](home-page.png)
-
-### 2. Language Selection
+### 1. Home Page Language Selection
 ![Language Selection](language-selection.png)
 
 ### 3. Quiz Page
